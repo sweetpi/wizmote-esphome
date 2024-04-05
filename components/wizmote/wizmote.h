@@ -42,7 +42,6 @@ class WizMoteListener : public esp_now::ESPNowListener {
   Trigger<WizMotePacket> *get_on_button_trigger() { return this->on_button_; }
 
  protected:
-  bool find_bssid_index(WizMotePacket *packet, uint8_t *index);
   Trigger<WizMotePacket> *on_button_ = new Trigger<WizMotePacket>();
 };
   
